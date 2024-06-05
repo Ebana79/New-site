@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MA PAGE HTML</title>
+</head>
+<body>
+    <h1>Javascript - Training</h1>
+
+    <div class="class"></div>
+
+    <style>
+        body {
+            background-color: blueviolet;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+
+    <script>
+        var montantAEnvoyez = prompt('Montant à envoyer ');
+        parseInt(montantAEnvoyez);
+            alert('Vous avez saisie : ' + montantAEnvoyez +'XAF');
+            var A = parseInt(montantAEnvoyez);
+            alert(typeof A);
+
+        var montantMinimal = prompt('Montant Minimum');
+            alert('Vous avez saisie : ' + montantMinimal +'XAF');
+            var B = parseInt(montantMinimal);
+            alert(typeof B);
+
+        var fraisFixers = prompt('Ici les frais fixés ');
+            alert('Vous avez saisie : ' + fraisFixers +'XAF');
+            var C = parseInt(fraisFixers);
+            alert(typeof C);
+
+        var taux = prompt('Ici le taux en %');
+            alert('Vous avez saisie : ' + taux +'%');
+            var D = parseFloat(taux);
+            alert(D*100)
+            alert(typeof D);
+
+        //Calcule
+        var frais = C+((A-B)*D);
+
+        //Affichage
+        alert('Voici vos frais : ' + frais +'XAF');
+
+        //Condition
+        if (frais >= A) {
+            alert('Perte !');
+        }
+
+        else if (frais <= A)
+        {
+            alert('Gain !');
+        }
+
+        else if (frais == A)
+        {
+            alert('Ni gain, Ni perte !');
+        }
+
+        else {
+            alert('Pas de frais localisé')
+        }
+
+        //Le B est une variable nécéssaire pour des frais plus reduit
+    </script>
+</body>
+</html>
